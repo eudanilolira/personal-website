@@ -3,76 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danilo Lira's Personal Website</title>
+    <title>Danilo Lira</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- Google Fonts for Typography (Poppins to match the style) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts for Typography (Poppins and Roboto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- AOS for Section Entry Animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <header>
-        <section class="hero">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <img src="path/to/logo.png" alt="Danilo Lira Logo" class="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#work-experience">Work</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button id="theme-toggle" aria-label="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <section class="hero" data-aos="fade-up">
             <div class="hero-content">
                 <h1>Hi! I'm Danilo Lira</h1>
                 <h2>Software Engineer and Content Creator</h2>
                 <div class="social-links">
-                    <a href="#">LinkedIn</a> |
-                    <a href="#">Instagram</a> |
-                    <a href="#">YouTube</a>
+                    <a href="https://www.linkedin.com/in/manilo-lira01">LinkedIn</a> |
+                    <a href="https://github.com/manilolira01">GitHub</a>
                 </div>
+                <a href="#contact" class="cta-button">Contact Me</a>
             </div>
         </section>
     </header>
 
     <main>
-        <section class="about-me" id="about">
-            <h2 class="section-title">Building stuff since before the 1st generation iPhone.</h2>
+        <section class="about-me" id="about" data-aos="fade-up">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="assets/profile.jpeg" alt="Danilo Lira" class="round-image">
+                </div>
+                <div class="about-cards">
+                    <div class="about-card">
+                        <h3>Background</h3>
+                        <p>With over 4 years in iOS development, I began my journey at the Apple Developer Academy, mastering mobile development and completing diverse projects.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Expertise</h3>
+                        <p>Skilled in Swift, Clean Architecture, and Python, with experience at XP Inc, BTG Pactual, and as a freelancer at MedicalSys.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>Passion</h3>
+                        <p>I love creating content to share my knowledge and am always exploring new technologies to enhance my craft.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills" id="skills" data-aos="fade-up">
+            <h2 class="section-title">Skills & Technologies</h2>
             <div class="skills-grid">
                 <div class="skill-item">
-                    <span class="icon">👁️‍🗨️</span>
-                    <h3>UX Enthusiast</h3>
-                    <p>I graduated in Visual Arts and I am deeply committed to delivering the best user experience in all my projects.</p>
+                    <span class="skill-icon"><i class="fas fa-mobile-alt"></i></span>
+                    <h3>Swift & iOS</h3>
+                    <p>Expert in Swift for iOS app development with 4+ years of hands-on experience.</p>
                 </div>
                 <div class="skill-item">
-                    <span class="icon">💻</span>
-                    <h3>Clean Code</h3>
-                    <p>I stick to best development practices, following solid software principles and always focusing on writing clean, efficient code.</p>
+                    <span class="skill-icon"><i class="fas fa-code"></i></span>
+                    <h3>Clean Architecture</h3>
+                    <p>Proficient in implementing clean, maintainable code structures.</p>
                 </div>
                 <div class="skill-item">
-                    <span class="icon">📱</span>
-                    <h3>iOS and Games Expert</h3>
-                    <p>I have 10 years of experience in app development and have been recognized with 5 awards for my work as a game developer.</p>
+                    <span class="skill-icon"><i class="fab fa-python"></i></span>
+                    <h3>Python</h3>
+                    <p>Skilled in Python for scripting and backend development.</p>
                 </div>
                 <div class="skill-item">
-                    <span class="icon">🛠️</span>
-                    <h3>Software Engineer</h3>
-                    <p>With over 13 years of experience in software development, I have worked with a wide range of languages and technologies.</p>
+                    <span class="skill-icon"><i class="fas fa-tools"></i></span>
+                    <h3>Software Engineering</h3>
+                    <p>Over 4 years of experience with a wide range of technologies.</p>
                 </div>
             </div>
         </section>
 
-        <section class="skills" id="skills">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-list">
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <ul>
-                        <li>Swift <div class="progress-bar"><div class="progress" data-value="90"></div></div></li>
-                        <li>JavaScript <div class="progress-bar"><div class="progress" data-value="80"></div></div></li>
-                        <li>Python <div class="progress-bar"><div class="progress" data-value="70"></div></div></li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Frameworks & Tools</h3>
-                    <ul>
-                        <li>React <div class="progress-bar"><div class="progress" data-value="85"></div></div></li>
-                        <li>Xcode <div class="progress-bar"><div class="progress" data-value="90"></div></div></li>
-                        <li>Unity <div class="progress-bar"><div class="progress" data-value="75"></div></div></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="portfolio" id="portfolio">
+        <section class="portfolio" id="portfolio" data-aos="fade-up">
             <h2 class="section-title">My Projects</h2>
             <div class="projects-grid">
                 <div class="project-item">
@@ -90,34 +113,79 @@
             </div>
         </section>
 
-        <section class="contact" id="contact">
-            <h2 class="section-title">Get in Touch</h2>
-            <form action="#" method="POST" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required aria-required="true" placeholder="Your Name">
+        <section class="work-experience" id="work-experience" data-aos="fade-up">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="experience-list">
+                <div class="experience-item">
+                    <h3>iOS Software Engineer @ XP Inc</h3>
+                    <p><strong>São Paulo, Brazil</strong> | 01/2022 - Present</p>
+                    <ul class="experience-details">
+                        <li>Spearheaded development of Biometry, Fingerprint, and Antifraud features using Swift, VIPER, and Clean architecture.</li>
+                        <li>Led migration of security features to Flutter, documenting and implementing the process.</li>
+                        <li>Implemented customer auto-services, saving R$7M annually and reducing contact rates by 62%.</li>
+                        <li>Mentored Security Hackathon XP 2022, reviewing pull requests and guiding participants.</li>
+                    </ul>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required aria-required="true" placeholder="your.email@example.com">
+                <div class="experience-item">
+                    <h3>iOS Junior Software Engineer @ BTG Pactual</h3>
+                    <p><strong>São Paulo, Brazil</strong> | 09/2021 - 12/2021</p>
+                    <ul class="experience-details">
+                        <li>Worked in Digital Account squad using MVVM-C architecture, gaining insights into large-scale development practices.</li>
+                    </ul>
                 </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required aria-required="true" placeholder="Subject of your message">
+                <div class="experience-item">
+                    <h3>Software Engineer Freelancer @ MedicalSys</h3>
+                    <p><strong>Recife, Brazil</strong> | 02/2021 - 08/2021</p>
+                    <ul class="experience-details">
+                        <li>Maintained MedicalSys health office system, adding features and fixes with Django.</li>
+                    </ul>
                 </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required aria-required="true" placeholder="Your message here..." rows="5"></textarea>
+            </div>
+        </section>
+
+        <section class="education" id="education" data-aos="fade-up">
+            <h2 class="section-title">Education</h2>
+            <div class="education-list">
+                <div class="education-item">
+                    <span class="education-icon"><i class="fas fa-graduation-cap"></i></span>
+                    <h3>Information Systems Bachelor</h3>
+                    <p><strong>Universidade Federal de Pernambuco, Recife, Brazil</strong></p>
+                    <div class="education-details">
+                        Monitor of Programming I and Software Engineering disciplines.
+                    </div>
                 </div>
-                <button type="submit" class="cta-button">Send Message</button>
-            </form>
+                <div class="education-item">
+                    <span class="education-icon"><i class="fas fa-graduation-cap"></i></span>
+                    <h3>Apple Developer Academy</h3>
+                    <p><strong>Universidade Federal de Pernambuco, Recife, Brazil</strong></p>
+                    <div class="education-details">
+                        Interdisciplinary training in programming, entrepreneurship, and design, focusing on iOS ecosystem.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact" data-aos="fade-up">
+            <h2 class="section-title">Send a Message</h2>
+            <div class="contact-content">
+                <p>Interested in collaborating or have a question? Feel free to reach out!</p>
+                <a href="mailto:teste@gmail.com" class="cta-button">Send an Email</a>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2025 Danilo Lira. All rights reserved.</p>
+        <div class="footer-content">
+            <img src="path/to/logo.png" alt="Danilo Lira Logo" class="footer-logo">
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/manilo-lira01"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/manilolira01"><i class="fab fa-github"></i></a>
+            </div>
+            <p>© 2025 Danilo Lira. All rights reserved.</p>
+        </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
