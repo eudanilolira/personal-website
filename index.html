@@ -3,12 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Danilo Lira's Personal Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts for Typography (Poppins to match the style) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Hi! I'm Danilo Lira</h1>
+                <h2>Software Engineer and Content Creator</h2>
+                <div class="social-links">
+                    <a href="#">LinkedIn</a> |
+                    <a href="#">Instagram</a> |
+                    <a href="#">YouTube</a>
+                </div>
+            </div>
+        </section>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -19,24 +31,35 @@
     </header>
 
     <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>This is my personal website. Welcome!</p>
-        </section>
-
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Here's some information about me.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Get in touch with me here.</p>
+        <section class="about-me" id="about">
+            <h2 class="section-title">Building stuff since before the 1st generation iPhone.</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <span class="icon">👁️‍🗨️</span>
+                    <h3>UX Enthusiast</h3>
+                    <p>I graduated in Visual Arts and I am deeply committed to delivering the best user experience in all my projects.</p>
+                </div>
+                <div class="skill-item">
+                    <span class="icon">💻</span>
+                    <h3>Clean Code</h3>
+                    <p>I stick to best development practices, following solid software principles and always focusing on writing clean, efficient code.</p>
+                </div>
+                <div class="skill-item">
+                    <span class="icon">📱</span>
+                    <h3>iOS and Games Expert</h3>
+                    <p>I have 10 years of experience in app development and have been recognized with 5 awards for my work as a game developer.</p>
+                </div>
+                <div class="skill-item">
+                    <span class="icon">🛠️</span>
+                    <h3>Software Engineer</h3>
+                    <p>With over 13 years of experience in software development, I have worked with a wide range of languages and technologies.</p>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <p>© 2025 Danilo Lira. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
