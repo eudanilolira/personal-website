@@ -9,6 +9,7 @@ body {
     font-family: 'Poppins', Arial, sans-serif; /* Matching the modern sans-serif style */
     line-height: 1.6;
     color: #FFFFFF;
+    background-color: #1A1A1A;
 }
 
 /* Hero section styles */
@@ -57,31 +58,6 @@ body {
 
 .social-links a:hover {
     text-decoration: underline;
-}
-
-/* Navigation styles */
-header nav {
-    background-color: #1A1A1A; /* Matching the hero background */
-    padding: 1rem;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-nav a {
-    color: #D81B60; /* Consistent color with social links */
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-}
-
-nav a:hover {
-    color: white;
 }
 
 /* About Me Section Styles */
@@ -134,6 +110,196 @@ nav a:hover {
     font-size: 1rem;
     color: #A0A0A0; /* Grayish-blue for descriptions */
     line-height: 1.5;
+}
+
+/* Skills Section Styles */
+.skills {
+    background-color: #1A1A1A;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.skills-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+}
+
+.skill-category h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+}
+
+.skill-category ul {
+    list-style: none;
+    text-align: left;
+}
+
+.skill-category li {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #A0A0A0;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #333333;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+
+.progress {
+    height: 100%;
+    background-color: #D81B60;
+    width: 0;
+    transition: width 1.5s ease-in-out;
+    border-radius: 5px;
+}
+
+/* Portfolio Section Styles */
+.portfolio {
+    background-color: #1A1A1A;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-item {
+    background-color: #2A2A2A;
+    padding: 1.5rem;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.project-item h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    margin-bottom: 0.5rem;
+}
+
+.project-item p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #A0A0A0;
+    margin-bottom: 1rem;
+}
+
+.project-link {
+    color: #D81B60;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section Styles */
+.contact {
+    background-color: #1A1A1A;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #FFFFFF;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    border: 2px solid #333333;
+    border-radius: 5px;
+    background-color: #2A2A2A;
+    color: #FFFFFF;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #D81B60;
+}
+
+.form-group input:invalid:focus,
+.form-group textarea:invalid:focus {
+    border-color: #FF4444;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #D81B60; /* Pinkish-purple CTA */
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #B0174C; /* Darker pink on hover */
+}
+
+.cta-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(216, 27, 96, 0.3);
 }
 
 /* Main content and footer styles */
