@@ -7,7 +7,7 @@
 
 # Personal Website
 
-A simple, responsive personal website built with HTML, CSS, and JavaScript, featuring a contact form with a form submission service.
+A simple, responsive personal website built with HTML, CSS, and JavaScript. Totally made with Grok.
 
 ## Table of Contents
 - [Project Overview](#project-overview)
