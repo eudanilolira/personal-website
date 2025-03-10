@@ -9,12 +9,10 @@ A simple, responsive personal website built with HTML, CSS, and JavaScript, feat
 - [Setup](#setup)
 - [File Structure](#file-structure)
 - [Usage](#usage)
-- [Contact Form Service](#contact-form-service)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Project Overview
-This project is a personal website designed to showcase my portfolio, skills, and contact information. It’s a lightweight, front-end focused site built with vanilla HTML, CSS, and JavaScript. The contact form integrates with a third-party form service for handling submissions.
+This project is a personal website designed to showcase my portfolio, skills, and contact information. It’s a lightweight, front-end focused site built with vanilla HTML, CSS, and JavaScript.
 
 ## Features
 - Responsive design for mobile, tablet, and desktop screens
@@ -27,7 +25,6 @@ This project is a personal website designed to showcase my portfolio, skills, an
 - **HTML5**: Structure and content
 - **CSS3**: Styling and layout (including Flexbox/Grid if applicable)
 - **JavaScript**: Interactivity and form handling
-- **Form Service**: [Insert service name, e.g., Formspree, Getform, etc.]
 - **Version Control**: Git
 
 ## Setup
