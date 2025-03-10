@@ -31,4 +31,4 @@ This project is a personal website designed to showcase my portfolio, skills, an
 To run this project locally:
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/eudanilolira/danilolira.github.io.git
+   git clone git@github.com:eudanilolira/personal-website.git
