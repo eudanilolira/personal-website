@@ -15,6 +15,9 @@
 <body>
     <header>
         <nav class="navbar">
+            <button class="nav-toggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
             <div class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
@@ -210,5 +213,16 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            navToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                navToggle.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>

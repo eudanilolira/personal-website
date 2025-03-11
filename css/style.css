@@ -35,7 +35,7 @@ body.light-mode {
 }
 
 body {
-    font-family: 'Roboto', Arial, sans-serif; /* Use Roboto for body text */
+    font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
     background-color: var(--background);
     color: var(--text);
@@ -48,7 +48,7 @@ body {
     background: rgba(15, 15, 15, 0.9);
     backdrop-filter: blur(5px);
     display: flex;
-    justify-content: flex-end; /* Adjusted to center the nav-links since logo is removed */
+    justify-content: flex-end; /* Reverted to right alignment for desktop */
     align-items: center;
     padding: 1rem 2rem;
     z-index: 1000;
@@ -56,6 +56,21 @@ body {
 
 body.light-mode .navbar {
     background: rgba(255, 255, 255, 0.9);
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-toggle.active .fas.fa-bars::before {
+    content: "\f00d"; /* Change to 'x' when active */
 }
 
 .nav-links {
@@ -143,7 +158,6 @@ body.light-mode .navbar {
     background-size: 200px 200px;
     animation: moveDots 10s infinite linear;
     opacity: 0.5;
-    /* Parallax effect */
     background-attachment: fixed;
     background-position: center;
     will-change: transform;
@@ -262,21 +276,21 @@ body.light-mode .navbar {
 .about-container {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex; /* Changed to flex for better control of left-aligned content */
-    align-items: flex-start; /* Align items at the top */
-    gap: 2rem; /* Space between the text group and image */
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
     position: relative;
     z-index: 1;
 }
 
 .about-text-group {
-    flex: 2; /* Takes up more space for title and cards */
-    text-align: left; /* Ensure left alignment for title and cards */
+    flex: 2;
+    text-align: left;
 }
 
 .about-me .section-title {
-    text-align: left; /* Already set, confirmed here */
-    margin-bottom: 2rem; /* Reduced margin to align closely with cards */
+    text-align: left;
+    margin-bottom: 2rem;
 }
 
 .about-cards {
@@ -316,8 +330,8 @@ body.light-mode .navbar {
 }
 
 .about-image {
-    flex: 1; /* Takes up less space, positioned on the right */
-    justify-self: flex-end; /* Ensures image aligns to the right */
+    flex: 1;
+    justify-self: flex-end;
 }
 
 .round-image {
@@ -418,17 +432,10 @@ body.light-mode .navbar {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Enforce exactly 2 projects per row */
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     position: relative;
     z-index: 1;
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: repeat(1, 1fr); /* 1 project per row on mobile */
-    }
 }
 
 .project-item {
@@ -440,16 +447,15 @@ body.light-mode .navbar {
 
 .project-item img {
     width: 100%;
-    aspect-ratio: 3 / 2; /* Enforce 3:2 aspect ratio */
-    object-fit: cover; /* Ensure the image fills the space without distortion */
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
     border-radius: 5px;
     margin-bottom: 1rem;
 }
 
-/* Fallback for browsers that don't support aspect-ratio */
 @supports not (aspect-ratio: 3 / 2) {
     .project-item img {
-        height: 200px; /* Approximate height for 300px width at 3:2 ratio */
+        height: 200px;
     }
 }
 
@@ -777,4 +783,347 @@ main {
 
 section {
     margin-bottom: 4rem;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet and Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    /* General Adjustments */
+    .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Navigation */
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        text-align: center;
+        background: rgba(15, 15, 15, 0.95); /* Reverted to original dark mode background */
+    }
+
+    body.light-mode .nav-links {
+        background: rgba(245, 245, 245, 0.95); /* Light mode background remains unchanged */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .nav-links li a {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+        display: block;
+    }
+
+    #theme-toggle {
+        margin-top: 0.5rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        min-height: 70vh;
+        padding: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .social-links a {
+        font-size: 1rem;
+        margin: 0 0.3rem;
+    }
+
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* About Me Section */
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .about-text-group {
+        text-align: center;
+    }
+
+    .about-me .section-title {
+        text-align: center;
+    }
+
+    .about-image {
+        order: -1;
+    }
+
+    .round-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-card p {
+        font-size: 1rem;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .skill-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .skill-item p {
+        font-size: 0.9rem;
+    }
+
+    .skill-icon {
+        font-size: 2rem;
+    }
+
+    /* Portfolio Section */
+    .projects-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .project-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .project-item p {
+        font-size: 0.9rem;
+    }
+
+    .project-link {
+        font-size: 1rem;
+    }
+
+    /* Work Experience Section */
+    .timeline-line {
+        left: 20px;
+        transform: none;
+    }
+
+    .experience-card {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        align-self: center;
+    }
+
+    .experience-card:nth-child(even) {
+        align-self: center;
+        margin-right: 0;
+    }
+
+    .experience-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .experience-card p {
+        font-size: 0.9rem;
+    }
+
+    .experience-details p {
+        font-size: 0.9rem;
+    }
+
+    /* Education Section */
+    .education-item {
+        min-width: 100%;
+    }
+
+    .education-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .education-item p {
+        font-size: 0.9rem;
+    }
+
+    .education-details {
+        font-size: 0.9rem;
+    }
+
+    /* Contact Section */
+    .contact-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    /* General Adjustments */
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    section {
+        padding: 1.5rem 0.5rem;
+    }
+
+    /* Navigation */
+    .nav-links li a {
+        font-size: 1rem;
+    }
+
+    #theme-toggle {
+        font-size: 1rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        min-height: 60vh;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .social-links a {
+        font-size: 0.9rem;
+        margin: 0 0.2rem;
+    }
+
+    .cta-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    /* About Me Section */
+    .round-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .about-card p {
+        font-size: 0.9rem;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .skill-item {
+        padding: 1rem;
+    }
+
+    .skill-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .skill-item p {
+        font-size: 0.8rem;
+    }
+
+    /* Portfolio Section */
+    .project-item {
+        padding: 1rem;
+    }
+
+    .project-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-item p {
+        font-size: 0.8rem;
+    }
+
+    .project-link {
+        font-size: 0.9rem;
+    }
+
+    /* Work Experience Section */
+    .experience-card {
+        padding: 1rem;
+    }
+
+    .experience-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .experience-card p {
+        font-size: 0.8rem;
+    }
+
+    .experience-details p {
+        font-size: 0.8rem;
+    }
+
+    /* Education Section */
+    .education-item {
+        padding: 1.5rem;
+    }
+
+    .education-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .education-item p {
+        font-size: 0.8rem;
+    }
+
+    /* Contact Section */
+    .contact-content p {
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-socials a {
+        font-size: 1.2rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
 }
